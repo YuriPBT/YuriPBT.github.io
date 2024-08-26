@@ -1,0 +1,7 @@
+# Robots.txt file for brewthings.yuripettignano.work
+
+User-agent: *
+Disallow: /cgi-bin/
+Sitemap: https://brewthings.yuripettignano.work/sitemap.xml
+Disallow: /scripts/
+Disallow: /tmp/
