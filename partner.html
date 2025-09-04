@@ -58,25 +58,42 @@
                 <p style="text-align: center;"><a href="https://www.itsalbatros.me.it/lits-albatros-e-il-corsista-iuri/"><img src="images/albatros logo.jpg" alt="Logo fondazione ITS Albatros" width="300" height="300"></a> &ensp;  <a href="https://www.zankle.info/"><img src="images/zankle logo.png" alt="Logo Birrificio Artigianale Zankle" width="300" height="300"></a> </p>
 
 								</div>
-                            </div>
-								
-				
-								<!-- Copyright -->
-								<div id="copyright">
-									<ul><li>&copy; 2024 Yuri Pettignano...brews things!</li><li>Theme: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-								</div>
-				
-							</div>
-				
-						<!-- Scripts -->
-							<script src="assets/js/jquery.min.js"></script>
-							<script src="assets/js/jquery.scrollex.min.js"></script>
-							<script src="assets/js/jquery.scrolly.min.js"></script>
-							<script src="assets/js/browser.min.js"></script>
-							<script src="assets/js/breakpoints.min.js"></script>
-							<script src="assets/js/util.js"></script>
-							<script src="assets/js/main.js"></script>
-				
-					</body>
-				</html>
+                  </section>
+
+        </div> <!-- fine #main -->
+
+        <!-- Footer integrato -->
+            <div id="copyright">
+                <ul>
+                    <li>&copy; 2024-<span id="year"></span> Yuri Pettignano...brews things!</li>
+                    <li>Theme: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></li>
+                </ul>
+            </div>
+
+    </div> <!-- fine #wrapper -->
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Script per aggiornare l'anno -->
+    <script>
+        (function() {
+            const startYear = 2024;
+            const currentYear = new Date().getFullYear();
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) {
+                yearSpan.textContent = (currentYear === startYear) ? startYear : currentYear;
+            }
+        })();
+    </script>
+
+</body>
+</html>
+
 
