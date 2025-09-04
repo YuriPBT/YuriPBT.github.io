@@ -97,12 +97,17 @@
 
                     <p>Conclusione dell'articolo...</p>
                 </article>
-            </section>
+         </section>
 
         </div> <!-- fine #main -->
 
-        <!-- Footer container -->
-        <div id="footer-container"></div>
+        <!-- Footer integrato -->
+            <div id="copyright">
+                <ul>
+                    <li>&copy; 2024-<span id="year"></span> Yuri Pettignano...brews things!</li>
+                    <li>Theme: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></li>
+                </ul>
+            </div>
 
     </div> <!-- fine #wrapper -->
 
@@ -115,21 +120,18 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- Caricamento footer -->
+    <!-- Script per aggiornare l'anno -->
     <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-                const startYear = 2024;
-                const currentYear = new Date().getFullYear();
-                const yearSpan = document.getElementById('year');
-                if (yearSpan) {
-                    yearSpan.textContent = currentYear;
-                }
-            })
-            .catch(error => console.error('Errore nel caricamento del footer:', error));
+        (function() {
+            const startYear = 2024;
+            const currentYear = new Date().getFullYear();
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) {
+                yearSpan.textContent = (currentYear === startYear) ? startYear : currentYear;
+            }
+        })();
     </script>
 
 </body>
 </html>
+
