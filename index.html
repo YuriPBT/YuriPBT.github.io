@@ -144,5 +144,35 @@
         <div id="copyright">
             <ul>
                 <li>&copy; 2024-2025 Yuri Pettignano...brews things!</li>
-                <li>Theme: <a href="https://html5up.net">HTML5 UP</a
+                <li>Theme: <a href="https://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
 
+    </div> <!-- fine wrapper -->
+
+      <!-- Script per gestione intro -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has("noIntro")) {
+            const intro = document.getElementById("intro");
+            if (intro) intro.remove();
+            document.body.classList.add("no-intro");
+            document.body.classList.remove("is-preload");
+            const wrapper = document.getElementById("wrapper");
+            if (wrapper) wrapper.classList.remove("fade-in");
+        }
+    });
+    </script>
+
+    <!-- Script del tema -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
