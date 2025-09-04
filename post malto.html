@@ -119,20 +119,37 @@
                 </article>
             </section>
 
-        </div>
+         </div> <!-- fine #main -->
 
-       <!-- Copyright -->
-								<div id="copyright">
-									<ul><li>&copy; 2024-2025 Yuri Pettignano...brews things!</li><li>Theme: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-								</div>
-				
-							</div>
+        <!-- Footer container -->
+        <div id="footer-container"></div>
 
-    </div>
+    </div> <!-- fine #wrapper -->
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-    <script src="assets/js/jquery.scrolly
+    <!-- Caricamento footer -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+                const startYear = 2024;
+                const currentYear = new Date().getFullYear();
+                const yearSpan = document.getElementById('year');
+                if (yearSpan) {
+                    yearSpan.textContent = currentYear;
+                }
+            })
+            .catch(error => console.error('Errore nel caricamento del footer:', error));
+    </script>
 
+</body>
+</html>
