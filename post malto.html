@@ -119,12 +119,19 @@
 
                     <p>Sebbene ci sarebbe ancora molto da dire sul malto e i cereali, questa “piccola” lettura è giunta al termine. Restate sintonizzati per nuove curiosità sul sito “Yuri Pettignano…brews Things!”.</p>
                 </article>
-            </section>
+         </section>
 
         </div> <!-- fine #main -->
 
-        <!-- Footer container -->
-        <div id="footer-container"></div>
+        <!-- Footer integrato -->
+        <footer id="footer">
+            <div id="copyright">
+                <ul>
+                    <li>&copy; 2024-<span id="year"></span> Yuri Pettignano...brews things!</li>
+                    <li>Theme: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
 
     </div> <!-- fine #wrapper -->
 
@@ -137,28 +144,19 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- Caricamento footer -->
+    <!-- Script per aggiornare l'anno -->
     <script>
-        fetch('footer.html')
-            .then(response => {
-                if (!response.ok) throw new Error('Footer non trovato');
-                return response.text();
-            })
-            .then(data => {
-                if (data.trim()) {
-                    document.getElementById('footer-container').innerHTML = data;
-                } else {
-                    document.getElementById('footer-container').style.display = 'none';
-                }
-            })
-            .catch(error => {
-                console.error('Errore nel caricamento del footer:', error);
-                document.getElementById('footer-container').style.display = 'none';
-            });
+        (function() {
+            const startYear = 2024;
+            const currentYear = new Date().getFullYear();
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) {
+                yearSpan.textContent = (currentYear === startYear) ? startYear : currentYear;
+            }
+        })();
     </script>
 
 </body>
 </html>
-
 
 
