@@ -65,6 +65,8 @@
         <!-- Main -->
         <div id="main">
 
+
+
             <!-- Post -->
             <section class="post">
                 <header class="major">
@@ -119,7 +121,7 @@
                 </article>
             </section>
 
-         </div> <!-- fine #main -->
+        </div> <!-- fine #main -->
 
         <!-- Footer container -->
         <div id="footer-container"></div>
@@ -138,18 +140,25 @@
     <!-- Caricamento footer -->
     <script>
         fetch('footer.html')
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) throw new Error('Footer non trovato');
+                return response.text();
+            })
             .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-                const startYear = 2024;
-                const currentYear = new Date().getFullYear();
-                const yearSpan = document.getElementById('year');
-                if (yearSpan) {
-                    yearSpan.textContent = currentYear;
+                if (data.trim()) {
+                    document.getElementById('footer-container').innerHTML = data;
+                } else {
+                    document.getElementById('footer-container').style.display = 'none';
                 }
             })
-            .catch(error => console.error('Errore nel caricamento del footer:', error));
+            .catch(error => {
+                console.error('Errore nel caricamento del footer:', error);
+                document.getElementById('footer-container').style.display = 'none';
+            });
     </script>
 
 </body>
 </html>
+
+
+
