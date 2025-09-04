@@ -1,82 +1,135 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>post</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="it">
+<head>
+    <meta charset="utf-8" />
+    <title>Titolo Articolo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Descrizione breve dell'articolo.">
+    <meta name="author" content="Yuri Pettignano">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Titolo Articolo">
+    <meta property="og:description" content="Descrizione breve dell'articolo.">
+    <meta property="og:image" content="images/immagine.jpg">
+    <meta property="og:type" content="article">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Home</a>
-					</header>
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Titolo Articolo">
+    <meta name="twitter:description" content="Descrizione breve dell'articolo.">
+    <meta name="twitter:image" content="images/immagine.jpg">
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="home.html">Alchimia</a></li>
-							<li><a href="about.html">Chi sono</a></li>
-							<li><a href="partner.html">Partner</a></li>
-							<li><a href="contacts.html">Contatti</a></li>
-						</ul>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-                        
-						<ul class="icons">
-							<li><a href="https://www.facebook.com/profile.php?id=61563721883115" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.instagram.com/yuri_p.brews_things/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://x.com/YuriPettignano" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						</ul>
-					</nav>
+    <style>
+        .post-image img {
+            transition: transform 0.3s ease;
+        }
+        .post-image img:hover {
+            transform: scale(1.02);
+        }
+        blockquote {
+            border-left: 4px solid #ccc;
+            padding-left: 1em;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body class="is-preload">
 
-				<!-- Main -->
-					<div id="main">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Home</a>
+        </header>
 
-                                    <span class="date">Data</span>
-									<h1>Titolo<br />
-									</h1>
-<!-- Post titolo -->
-<article id="about">
-    <span class="image main"><img src="images/pic01.jpg" alt="tag immagine" /></span>
-    <p style="text-align: justify;">testo header	</header> 
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html?noIntro=1">Alchimia</a></li>
+                <li><a href="about.html">Chi sono</a></li>
+                <li><a href="partner.html">Partner</a></li>
+                <li><a href="contacts.html">Contatti</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/profile.php?id=61563721883115" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/yuri_p.brews_things/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://x.com/YuriPettignano" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            </ul>
+        </nav>
 
+        <!-- Main -->
+        <div id="main">
 
-                                </div>
-                            </article>
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <span class="date">GG/MM/AAAA</span>
+                    <h1>Titolo<br>Articolo</h1>
+                    <p>Sottotitolo o introduzione dell'articolo.</p>
+                </header>
 
-                        </section>
-								
-				
-								<!-- Copyright -->
-								<div id="copyright">
-									<ul><li>&copy; 2024-2025 Yuri Pettignano...brews things!</li><li>Theme: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-								</div>
-				
-							</div>
-				
-						<!-- Scripts -->
-							<script src="assets/js/jquery.min.js"></script>
-							<script src="assets/js/jquery.scrollex.min.js"></script>
-							<script src="assets/js/jquery.scrolly.min.js"></script>
-							<script src="assets/js/browser.min.js"></script>
-							<script src="assets/js/breakpoints.min.js"></script>
-							<script src="assets/js/util.js"></script>
-							<script src="assets/js/main.js"></script>
-				
-					</body>
+                <article>
+                    <figure class="post-image">
+                        <img src="images/immagine.jpg" alt="Descrizione immagine" loading="lazy">
+                        <figcaption>Didascalia immagine</figcaption>
+                    </figure>
 
-				</html>
+                    <p>Testo introduttivo dell'articolo...</p>
+
+                    <h2>Sottotitolo sezione</h2>
+                    <p>Contenuto della sezione...</p>
+
+                    <blockquote>
+                        Citazione o frase d'effetto.
+                    </blockquote>
+
+                    <h2>Altra sezione</h2>
+                    <ul>
+                        <li>Punto elenco 1</li>
+                        <li>Punto elenco 2</li>
+                        <li>Punto elenco 3</li>
+                    </ul>
+
+                    <p>Conclusione dell'articolo...</p>
+                </article>
+            </section>
+
+        </div> <!-- fine #main -->
+
+        <!-- Footer container -->
+        <div id="footer-container"></div>
+
+    </div> <!-- fine #wrapper -->
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Caricamento footer -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+                const startYear = 2024;
+                const currentYear = new Date().getFullYear();
+                const yearSpan = document.getElementById('year');
+                if (yearSpan) {
+                    yearSpan.textContent = currentYear;
+                }
+            })
+            .catch(error => console.error('Errore nel caricamento del footer:', error));
+    </script>
+
+</body>
+</html>
